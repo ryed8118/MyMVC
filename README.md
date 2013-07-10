@@ -1,4 +1,0 @@
-MyMVC
-=====
-
-simple mvc framework

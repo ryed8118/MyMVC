@@ -1,0 +1,60 @@
+<?php
+/**
+ *  @author         Ryan Edge <ryan@blueacorn.com>
+ *  @description    MVC Base View Class
+ *
+ *  @link           https://bitbucket.org/baryan
+ */
+
+class View
+{
+
+    /**
+     * @var array $_viewQueue
+     */
+    private $_viewQueue = array();
+
+    /** @var string  Reusable path declared from the bootstrap */
+    public $viewName;
+//    public $pathView = 'views/';
+//    public $prefixView = 'v_';
+//    public $fileExtension = '.php';
+
+    // ------------------------------------------------------------------------
+
+    /**
+     * __construct - Required
+     */
+    public function __construct($name)
+    {
+//        require_once 'views/v_' . $name . '.php';
+//        return new $this;
+        echo $name;
+        require_once 'public/header.php';
+        include_once 'views/'.$name.'.php';
+        require_once 'public/footer.php';
+    }
+
+    // ------------------------------------------------------------------------
+
+    /**
+     *
+     * @param string 
+     * @return \MyMVC\app\libs
+     */
+    public function loadView($name, $data=null)
+    {
+
+        $this->viewName = $name;
+        require_once 'views/v_'.$this->viewName.'.php';
+        //require_once($this->pathView . $this->prefixView . $this->viewName . $this->fileExtension);
+        if (!is_null($data)) {
+            pass; //! todo
+        }
+        return new $this; //! todo
+    }
+
+    // ------------------------------------------------------------------------
+
+}
+/** eof */
