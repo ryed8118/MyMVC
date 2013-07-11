@@ -14,9 +14,6 @@ $mysqli = new mysqli($s->global->resources->default_setup->connection->host,$s->
 
 //var_dump($mysqli);
 
-
-
-
 /*
  * CREATE/MODIFY LOG FILES
  */
@@ -37,4 +34,3 @@ $fhandle = fopen('logs/'.$d,'r+');
 fwrite($fhandle,$text);
 var_dump($_COOKIE);
 //var_dump($_SESSION);
-

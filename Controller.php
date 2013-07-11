@@ -17,44 +17,26 @@ class Controller
     /** @var object $model Set from the bootstrap */
     public $model;
 
-    /** @var string $modelPath Reusable path declared from the bootstrap */
-    public $modelPath;
-    public $modelName;
-
     // ------------------------------------------------------------------------
 
     /**
      * __construct - Required
      */
-    public function __construct($name)
+    public function __construct()
     {
-        $this->model = new Model($name);
-
-        $this->view = new View($name);
+        echo "Base Controller Loaded...";
     }
 
     // ------------------------------------------------------------------------
 
     /**
      *
-     * @param string $model
-     * @return \jream\MVC\model
+     *
      */
-    public function loadModel($name, $path='models/m_')
+    public function loadModel($name, $path='models/M_')
     {
-        $this->modelName = $name . '.php';
-        $this->modelPath = $path; //!todo set this value in bootstrap
-        require_once($this->modelPath . $this->modelName);
+        require_once($path . ucfirst($name) . '.php');
         return new $this->model;
-    }
-
-    // ------------------------------------------------------------------------
-
-    /**
-     *
-     */
-    public function anon() {
-
     }
 
 }
