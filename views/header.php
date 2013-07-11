@@ -16,9 +16,14 @@
             padding-top: 60px;
             padding-bottom: 40px;
         }
+        .block {
+            background-color: #0088cc;
+            border-radius: 5px;
+            padding: 5px;
+        }
     </style>
     <link rel="stylesheet" href="public/css/bootstrap-responsive.min.css">
     <link rel="stylesheet" href="public/css/main.css">
 
-    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="../public/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>

@@ -13,7 +13,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="#">Project name</a>
+            <a class="brand" href="#">MVC</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li class="active"><a href="#">Home</a></li>
@@ -35,6 +35,7 @@
                 <form class="navbar-form pull-right">
                     <input name="id" class="span2" type="text" placeholder="User Name">
                     <input name="pass" class="span2" type="password" placeholder="Password">
+                    <input name="page" value="dashboard" type="hidden" />
                     <button type="submit" class="btn">Sign in</button>
                 </form>
             </div><!--/.nav-collapse -->
@@ -52,8 +53,9 @@
     </div>
 
     <div>
-        <div>
-            <form name="month" method="GET" action="index.php?log">
+        <div class="block">
+            <h3>View Logs:</h3>
+            <form name="month" method="GET" action="index.php">
                 <select name="month">
                     <option value="01">January</option>
                     <option value="02">February</option>
@@ -69,16 +71,17 @@
                     <option value="12">December</option>
                 </select>
                 <br />
-                <input name="submit" value="submit" type="submit" />
+                <input name="page" value="log" type="hidden" />
+                <input name="submit" value="Go" type="submit" />
             </form>
         </div>
-        <div>
+        <div class="block">
             <?php
-            echo ($result->num_rows);
-
-            foreach($result as $row){
-                echo $row['value'] . '<br />';
-            }
+//            echo ($result->num_rows);
+//
+//            foreach($result as $row){
+//                echo $row['value'] . '<br />';
+//            }
             ?>
         </div>
     </div>
