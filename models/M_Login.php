@@ -8,7 +8,16 @@ class M_Login extends Model {
     }
 
     public function userLogin($id, $pass) {
-        $result = $this->db->query("SELECT id, role FROM users WHERE id=$id AND password=$pass");
-        return $result;
+        $query = "SELECT id, role FROM users WHERE id='$id' AND password='$pass' LIMIT 1";
+        $statement = $this->db->query($query);
+        if(is_object($statement)){
+            $data = $statement->fetchAll();
+            return $data;
+        }else{
+            return false;
+        }
+
+
     }
+
 }

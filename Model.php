@@ -18,7 +18,8 @@ class Model
      */
     public function __construct()
     {
-        $s = simplexml_load_file('../local.xml');
+        echo 'Base Model Loaded...';
+        $s = simplexml_load_file('local.xml');
 
         try {
             $this->db = new PDO('mysql:host=localhost;dbname=magento','root','root');

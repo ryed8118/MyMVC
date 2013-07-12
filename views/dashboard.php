@@ -3,6 +3,6 @@
 <?php
 
 
-echo 'Welcome '. $result;
+echo 'Welcome [INSERT USER NAME HERE]';
 
 ?>

@@ -35,7 +35,7 @@
                 <form class="navbar-form pull-right">
                     <input name="id" class="span2" type="text" placeholder="User Name">
                     <input name="pass" class="span2" type="password" placeholder="Password">
-                    <input name="page" value="dashboard" type="hidden" />
+                    <input name="page" value="login" type="hidden" />
                     <button type="submit" class="btn">Sign in</button>
                 </form>
             </div><!--/.nav-collapse -->
